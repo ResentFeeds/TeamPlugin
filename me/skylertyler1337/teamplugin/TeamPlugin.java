@@ -1,5 +1,6 @@
 package me.skylertyler1337.teamplugin;
 
+import me.skylertyler1337.teamplugin.Commands.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 	@Override
 	public void onEnable() {
 	  System.out.println("[TeamPlugin] is Enabled!");
+          getCommand("join").setExecutor(new JoinCommand(this));
 	}
        
         @Override
