@@ -1,0 +1,9 @@
+name: TeamPlugin
+main: me.skylertyler1337.teamplugin.TeamPlugin
+author: [SkylerTyler1337]
+version: 1.0.0
+commands:
+   join:
+    description: joins a random team!
+   myteam:
+    description: say that your on a team!
