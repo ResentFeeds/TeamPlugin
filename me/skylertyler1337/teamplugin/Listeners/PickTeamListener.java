@@ -83,15 +83,71 @@ public class PickTeamListener implements Listener {
 		switch(event.getCurrentItem().getType()){
 		case LAPIS_BLOCK:
           //Teleports you to the certain Cordinate |
+                        Team.AddToTeam(TeamType.Blue, player);
 			teleportInworld(player, 2, 65, -82);
 			Team.blueteam.remove(player.getName());
 			Team.blueteam.add(player.getName());
+	  // === armor ===			
+            ItemStack leatherhelmet1 = new ItemStack(Material.LEATHER_HELMET);
+            LeatherArmorMeta leatherhelmetmeta1 = (LeatherArmorMeta) leatherhelmet1.getItemMeta();
+            leatherhelmetmeta1.setColor(Color.BLUE);
+            leatherhelmet1.setItemMeta(leatherhelmetmeta1);
+            //chesplate
+            ItemStack leatherchestplate1 = new ItemStack(Material.LEATHER_CHESTPLATE);
+            LeatherArmorMeta leatherchestplatemeta1 = (LeatherArmorMeta) leatherchestplate1.getItemMeta();
+            leatherchestplatemeta1.setColor(Color.BLUE);
+            leatherchestplate1.setItemMeta(leatherchestplatemeta1);
+            //leggings
+            ItemStack leatherlegging1 = new ItemStack(Material.LEATHER_LEGGINGS);
+            LeatherArmorMeta leatherleggingmeta1 = (LeatherArmorMeta) leatherlegging1.getItemMeta();
+            leatherleggingmeta1.setColor(Color.BLUE);
+            leatherlegging1.setItemMeta(leatherleggingmeta1);
+            //boots
+            ItemStack leatherboot1 = new ItemStack(Material.LEATHER_BOOTS);
+            LeatherArmorMeta leatherbootmeta1 = (LeatherArmorMeta) leatherboot1.getItemMeta();
+            leatherbootmeta1.setColor(Color.BLUE);
+            leatherboot1.setItemMeta(leatherbootmeta1);
+            //adding to inventory
+            PlayerInventory pi = player.getInventory();
+            pi.setHelmet(leatherhelmet1);
+            pi.setChestplate(leatherchestplate1);
+            pi.setLeggings(leatherlegging1);
+            pi.setBoots(leatherboot1);
 			player.sendMessage(String.format("%sYou Joined the %sBlue Team",ChatColor.GRAY,ChatColor.BLUE));
 			player.closeInventory();
 			break;
 		case REDSTONE_BLOCK:
  		 //Teleports you to the certain Cordinate |
+ 		        Team.AddToTeam(TeamType.Red, player);
 			teleportInworld(player, 9, 68, -8);
+			Team.redteam.add(player.getName());
+			Team.redteam.remove(player.getName());
+            //Armor
+            ItemStack leatherhelmet = new ItemStack(Material.LEATHER_HELMET);
+            LeatherArmorMeta leatherhelmetmeta = (LeatherArmorMeta) leatherhelmet.getItemMeta();
+            leatherhelmetmeta.setColor(Color.RED);
+            leatherhelmet.setItemMeta(leatherhelmetmeta);
+            
+            ItemStack leatherchestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+            LeatherArmorMeta leatherchestplatemeta = (LeatherArmorMeta) leatherchestplate.getItemMeta();
+            leatherchestplatemeta.setColor(Color.RED);
+            leatherchestplate.setItemMeta(leatherhelmetmeta);
+            
+            ItemStack leatherlegging = new ItemStack(Material.LEATHER_LEGGINGS);
+            LeatherArmorMeta leatherleggingmeta = (LeatherArmorMeta) leatherlegging.getItemMeta();
+            leatherleggingmeta.setColor(Color.RED);
+            leatherlegging.setItemMeta(leatherleggingmeta);
+            
+            ItemStack leatherboot = new ItemStack(Material.LEATHER_BOOTS);
+            LeatherArmorMeta leatherbootmeta = (LeatherArmorMeta) leatherboot.getItemMeta();
+            leatherbootmeta.setColor(Color.RED);
+            leatherboot.setItemMeta(leatherbootmeta);
+            //adding to inventory
+            PlayerInventory pi1 = player.getInventory();
+            pi1.setHelmet(leatherhelmet);
+            pi1.setChestplate(leatherchestplate);
+            pi1.setLeggings(leatherlegging);
+            pi1.setBoots(leatherboot);
 			player.sendMessage(String.format("%sYou Joined the %sRed Team",ChatColor.GRAY,ChatColor.RED));
 			player.closeInventory();
 			break;
@@ -103,6 +159,32 @@ public class PickTeamListener implements Listener {
 	  			teleportInworld(player, 2, 65, -82);
 	  			Team.blueteam.remove(player.getName());
 				Team.blueteam.add(player.getName());
+		   //Armor 
+	              ItemStack leatherhelmet2 = new ItemStack(Material.LEATHER_HELMET);
+	              LeatherArmorMeta leatherhelmetmeta2 = (LeatherArmorMeta) leatherhelmet2.getItemMeta();
+	              leatherhelmetmeta2.setColor(Color.BLUE);
+	              leatherhelmet2.setItemMeta(leatherhelmetmeta2);
+	              
+	              ItemStack leatherchestplate2 = new ItemStack(Material.LEATHER_CHESTPLATE);
+	              LeatherArmorMeta leatherchestplatemeta2 = (LeatherArmorMeta) leatherchestplate2.getItemMeta();
+	              leatherchestplatemeta2.setColor(Color.BLUE);
+	              leatherchestplate2.setItemMeta(leatherhelmetmeta2);
+	              
+	              ItemStack leatherlegging2 = new ItemStack(Material.LEATHER_LEGGINGS);
+	              LeatherArmorMeta leatherleggingmeta2 = (LeatherArmorMeta) leatherlegging2.getItemMeta();
+	              leatherleggingmeta2.setColor(Color.BLUE);
+	              leatherlegging2.setItemMeta(leatherleggingmeta2);
+	              
+	              ItemStack leatherboot2 = new ItemStack(Material.LEATHER_BOOTS);
+	              LeatherArmorMeta leatherbootmeta2 = (LeatherArmorMeta) leatherboot2.getItemMeta();
+	              leatherbootmeta2.setColor(Color.BLUE);
+	              leatherboot2.setItemMeta(leatherbootmeta2);
+	              //adding to inventory
+	              PlayerInventory pi2 = player.getInventory();
+	              pi2.setHelmet(leatherhelmet2);
+	              pi2.setChestplate(leatherchestplate2);
+	              pi2.setLeggings(leatherlegging2);
+	              pi2.setBoots(leatherboot2);
 				player.sendMessage(String.format("%sYou Joined the %sBlue Team",ChatColor.GRAY,ChatColor.BLUE));
 	  			player.closeInventory();
 			}else{
@@ -111,6 +193,32 @@ public class PickTeamListener implements Listener {
 				Team.redteam.remove(player.getName());
 				Team.redteam.add(player.getName());
 				teleportInworld(player, 9, 68, -8);
+               	    //Armor
+                      ItemStack leatherhelmet3 = new ItemStack(Material.LEATHER_HELMET);
+	              LeatherArmorMeta leatherhelmetmeta3 = (LeatherArmorMeta) leatherhelmet3.getItemMeta();
+	              leatherhelmetmeta3.setColor(Color.RED);
+	              leatherhelmet3.setItemMeta(leatherhelmetmeta3);
+	              
+	              ItemStack leatherchestplate3 = new ItemStack(Material.LEATHER_CHESTPLATE);
+	              LeatherArmorMeta leatherchestplatemeta3 = (LeatherArmorMeta) leatherchestplate3.getItemMeta();
+	              leatherchestplatemeta3.setColor(Color.RED);
+	              leatherchestplate3.setItemMeta(leatherhelmetmeta3);
+	              
+	              ItemStack leatherlegging3 = new ItemStack(Material.LEATHER_LEGGINGS);
+	              LeatherArmorMeta leatherleggingmeta3 = (LeatherArmorMeta) leatherlegging3.getItemMeta();
+	              leatherleggingmeta3.setColor(Color.RED);
+	              leatherlegging3.setItemMeta(leatherleggingmeta3);
+	              
+	              ItemStack leatherboot3 = new ItemStack(Material.LEATHER_BOOTS);
+	              LeatherArmorMeta leatherbootmeta3 = (LeatherArmorMeta) leatherboot3.getItemMeta();
+	              leatherbootmeta3.setColor(Color.RED);
+	              leatherboot3.setItemMeta(leatherbootmeta3);
+	              //adding to inventory
+	              PlayerInventory pi3 = player.getInventory();
+	              pi3.setHelmet(leatherhelmet3);
+	              pi3.setChestplate(leatherchestplate3);
+	              pi3.setLeggings(leatherlegging3);
+	              pi3.setBoots(leatherboot3);
 				player.sendMessage(String.format("%sYou Joined the %sRed Team",ChatColor.GRAY,ChatColor.RED));
 				player.closeInventory();
 			}
