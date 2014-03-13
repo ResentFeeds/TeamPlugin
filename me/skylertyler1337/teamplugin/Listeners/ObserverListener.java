@@ -1,7 +1,14 @@
 package me.skylertyler1337.teamplugin.Listeners;
-import me.skylertyler1337.teamplugin.TeamPlugin;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-   public class ObserverListener implements Listener{
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+
+import me.skylertyler1337.teamplugin.TeamPlugin;
+import me.skylertyler1337.teamplugin.Teams.Team;
+ public class ObserverListener implements Listener{
  public TeamPlugin instance;
 
   public void ObserverListener(TeamPlugin instance){
@@ -35,7 +42,7 @@ import org.bukkit.event.Listener;
 			event.setCancelled(true);
 			}
 		}
-	
-}
+	//still working on this 
+         } 
     
   }
